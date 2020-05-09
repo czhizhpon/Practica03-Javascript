@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<link href="../css/formulario_layout.css" rel="stylesheet"/>
+	<script src="../js/validar_formulario.js"></script>
+	<title>Formulario</title>
+</head>
+<body>
+	<section>
+		<header>
+			<h2>Validaciones con JavaScript</h2>
+		</header>
+		<form id="f_personal_data" onsubmit="return submitForm()">
+            
+            <label for="i_dni">Cédula:</label>
+			<input type="text" id="i_dni" class="text_input" onkeypress="return nNumberValidate(event, 10)" onkeyup="dniFormatValidation(this)" onblur="dniError(this)"/>
+			<br>
+			<div id="s_dni_notice" class="s_error_validation">
+				<span>** El número de cédula es inválido.</span>
+			</div>
+			<br>
+			<label for="i_name">Nombres:</label>
+			<input type="text" id="i_name" class="text_input" onkeypress="return onlyTextInput(event)" onkeyup="nStringValidate(this, 2)" onblur="nameError(this, 2)"/>
+			<br>
+			<div id="s_name_notice" class="s_error_validation">
+				<span>** Recuerde ingresar sus 2 nombres </span>
+				<br/>
+				<ul>
+					<li>Ej: Nombre1 Nombre2</li>
+				</ul>
+			</div>
+            <br>
+            <label for="i_lastname">Apellidos:</label>
+			<input type="text" id="i_lastname" class="text_input" onkeypress="return onlyTextInput(event)" onkeyup="nStringValidate(this, 2)" onblur="lastnameError(this, 2)"/>
+            <br>
+			<div id="s_lastname_notice" class="s_error_validation">
+				<span>** Recuerde Ingresar sus 2 apellidos </span>
+				<br/>
+				<ul>
+					<li>Ej: Apellido1 Apellido2</li>
+				</ul>
+			</div>
+            <br>
+            <label for="i_address">Dirección:</label>
+			<input type="text" id="i_address" class="text_input" onkeyup="addressEmptyValidation(this)" onblur="addressError(this)"/>
+            <br>
+			<div id="s_address_notice" class="s_error_validation">
+				<span>** Campo vacío</span>
+			</div>
+            <br>
+            <label for="i_phone_number">Teléfono:</label>
+			<input type="text" id="i_phone_number" class="text_input" onkeypress="return nNumberValidate(event, 10)" onkeyup="return phoneValidate(this, 10)" onblur="phoneError(this, 10)"/>
+            <br>
+			<div id="s_phone_notice" class="s_error_validation">
+				<span>** Teléfono debe tener 10 caracteres</span>
+				<br/>
+				<ul>
+					<li>Ej: 0988888888</li>
+				</ul>
+			</div>
+            <br>
+            <label for="i_born">F. Nacimiento:</label>
+			<input type="text" id="i_born" class="text_input" placeholder="dd/mm/yyyy" onkeyup="dateFormatValidation(this)" onblur="dateError(this)"/>
+			<br>
+			<div id="s_born_notice" class="s_error_validation">
+				<span>** Ingrese la fecha con el formato: dd/mm/yyyy</span>
+				<br/>
+				<ul>
+					<li>Ej: 02/02/2020</li>
+				</ul>
+			</div>
+            <br>
+			<label for="i_email">Email:</label>
+			<input type="text" id="i_email" class="text_input" onkeyup="emailFormatValidation(this)" onblur="emailError(this)"/>
+			<br>
+			<div id="s_email_notice" class="s_error_validation">
+				<span>** Debe usar un email institucional:</span>
+				<br/>
+				<ul>
+					<li>username@ups.edu.ec</li>
+					<li>username@est.ups.edu.ec </li>
+				</ul>
+			</div>
+            <br>
+			<label for="i_password">Contraseña:</label>
+			<input type="password" id="i_password" class="text_input" onkeyup="return passwordFormatValidation(this)" onblur="passwordError(this)"/>
+			<br>
+			<div id="s_password_notice" class="s_error_validation">
+				
+				<span>** Contraseña inválida, asegúrese de usar:</span>
+				<br/>
+				<ul>
+					<li>1 letra en mayúscula</li>
+					<li>1 letra en minúscula </li>
+					<li>1 carécter especial (@,_,$)</li>
+				</ul>
+				
+			</div>
+            <br>
+            <!--
+            <label for="i_confirm_password">Repetir Contraseña:</label>
+			<input type="password" id="i_confirm_password"/>
+			<br/>
+            -->
+			
+			<div class="d_button_container">
+				<input type="submit" id="i_send_data" class="submit_input" value="Enviar"/>
+			</div>
+		</form>
+	</section>
+</body>
+</html>
