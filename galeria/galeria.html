@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link href="../css/galeria_layout.css" rel="stylesheet"/>
+	<script src="../js/galeria.js"></script>
+	<title>Galeria</title>
+</head>
+<body onload="randomImg(); centerImg()" onresize="centerImg()">
+	<section>
+		<header>
+			<h2>Galeria con JavaScript</h2>
+        </header>
+        <div id="img_content">
+            <img src="/" alt="imagen_principal" id="img_main" class="img_move"/>
+            <img src="/" alt="imagen_auxiliar" id="img_aux" class="img_hidden img_move"/>
+        </div>
+        <form>
+            <input type="button" id="i_back" class="nav_button" value="Anterior" onclick="moveAnimateBack()">
+            <input type="button" id="i_start" class="nav_button" value="Iniciar" onclick="randomImg()">
+            <input type="button" id="i_next" class="nav_button" value="Siguiente" onclick="moveAnimateNext()">
+        </form>
+	</section>
+</body>
+</html>

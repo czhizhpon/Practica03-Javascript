@@ -1,0 +1,92 @@
+@font-face{
+    font-family: f_spartan;
+    src: url(font/Jost/Jost-VariableFont_ital\,wght.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'f_spartan';
+    background-color: #222;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+section {
+    margin-top: 50px;
+    padding:5px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: #999 0px 0px 5px;
+}
+
+section h2{
+    text-align: left;
+    background-color: #346157;
+    padding: 10px;
+    margin: 10px;
+    color: #eee;
+    border-radius: 5px;
+}
+
+.nav_button {
+    width: 125px;
+    transition: 0.1s all linear;
+    outline: none;
+    font-family: inherit;
+    font-size: 20px;
+
+    background-color: #B9770E;
+    border: #555 1px solid;
+    border-radius: 5px;
+
+    color: #eee;
+    
+    margin: 5px 5px 50px;
+    padding: 10px 20px;
+    
+}
+.nav_button:hover:enabled{
+    box-shadow: #bbb 0px 0px 6px;
+    border: #777 1px solid;
+}
+
+.nav_button:active{
+    transition: 0.1s all linear;
+    background-color: #9C640C;
+    border: #666 1px solid;
+}
+
+.nav_button:disabled{
+    transition: 0.1s all linear;
+    background-color: #333;
+    color: #aaa;
+}
+
+#img_content{
+    width: 100%;
+    height: 550px;
+}
+
+.img_hidden{
+    display: none;
+}
+
+.img_show{
+    display: inline-block;
+}
+
+.img_move{
+    position: absolute;
+    top: 170px;
+    bottom: 0px;
+    box-shadow: #555 0px 0px 10px;
+}
+
+.img_movenext{
+    transition: 0.1s all linear;
+    left: 2000px;
+}
