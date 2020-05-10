@@ -39,7 +39,7 @@ section h2{
     font-family: inherit;
     font-size: 20px;
 
-    background-color: #B9770E;
+    background-color: #B45F04;
     border: #555 1px solid;
     border-radius: 5px;
 
@@ -56,7 +56,7 @@ section h2{
 
 .nav_button:active{
     transition: 0.1s all linear;
-    background-color: #9C640C;
+    background-color: #8A4B08;
     border: #666 1px solid;
 }
 

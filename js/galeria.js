@@ -1,6 +1,5 @@
-const ACEL = 0.4;
-const vel = 12;
-const IMG_LIST = ["../img/img_1.jpg", "../img/img_2.jpg", "../img/img_3.jpeg",
+var vel = 12;
+var IMG_LIST = ["../img/img_1.jpg", "../img/img_2.jpg", "../img/img_3.jpeg",
 "../img/img_4.jpg", "../img/img_5.jpg", "../img/img_6.jpg", "../img/img_7.jpg",
 "../img/img_8.jpg", "../img/img_9.jpg", "../img/img_10.jpeg"];
 var imgList;
