@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-    <link href="../css/calculadora_layout.css" rel="stylesheet"/>
-	<script src="../js/calculadora.js"></script>
+    <link href="css/calculadora_layout.css" rel="stylesheet"/>
+	<script src="js/calculadora.js"></script>
 	<title>Calculadora</title>
 </head>
 <body>
@@ -13,23 +13,20 @@
 		</header>
 		<form id="f_calc">
             
-            <input type="text" id="i_result" value="0">
+            <input type="text" id="i_result" value="0" readonly>
             
             <div id="numbers_container">
                 <input type="button" id="in_7" value="7" onclick="print_value(this.value)"/>
                 <input type="button" id="in_8" value="8" onclick="print_value(this.value)"/>
                 <input type="button" id="in_9" value="9" onclick="print_value(this.value)"/>
-                
                 <br/>
                 <input type="button" id="in_4" value="4" onclick="print_value(this.value)"/>
                 <input type="button" id="in_5" value="5" onclick="print_value(this.value)"/>
                 <input type="button" id="in_6" value="6" onclick="print_value(this.value)"/>
-                
                 <br/>
                 <input type="button" id="in_1" value="1" onclick="print_value(this.value)"/>
                 <input type="button" id="in_2" value="2" onclick="print_value(this.value)"/>
                 <input type="button" id="in_3" value="3" onclick="print_value(this.value)"/>
-                
                 <br/>
                 <input type="button" id="in_dot" value="." onclick="print_value(this.value)"/>
                 <input type="button" id="in_0" value="0" onclick="print_value(this.value)"/>

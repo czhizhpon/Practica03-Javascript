@@ -16,7 +16,7 @@ function calc_result(){
     var resul_elem = document.getElementById("i_result");
     var resul = eval(resul_elem.value);
     if(!isFinite(resul)){
-        alert("Error - no se puede dividir para 0");
+        alert("Error - No se puede dividir para 0");
         resul_elem.value = 0;
     }else{
         resul_elem.value = eval(resul_elem.value);

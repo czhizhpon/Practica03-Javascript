@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link href="../css/galeria_layout.css" rel="stylesheet"/>
-	<script src="../js/galeria.js"></script>
+	<link href="css/galeria_layout.css" rel="stylesheet"/>
+	<script src="js/galeria.js"></script>
 	<title>Galeria</title>
 </head>
 <body onload="randomImg(); centerImg()" onresize="centerImg()">
@@ -18,7 +18,7 @@
         </div>
         <form>
             <input type="button" id="i_back" class="nav_button" value="Anterior" onclick="moveAnimateBack()">
-            <input type="button" id="i_start" class="nav_button" value="Iniciar" onclick="randomImg()">
+            <input type="button" id="i_start" class="nav_button" value="Iniciar" onclick="startRandom()">
             <input type="button" id="i_next" class="nav_button" value="Siguiente" onclick="moveAnimateNext()">
         </form>
 	</section>

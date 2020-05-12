@@ -1,4 +1,4 @@
-
+//Permite el ingreso de solo numeros
 function onlyNumbersInput(evt){
     var currentAscii = evt.charCode;
     console.log(currentAscii)
@@ -8,6 +8,7 @@ function onlyNumbersInput(evt){
     return true;
 }
 
+//Permite el ingreso de solo texto
 function onlyTextInput(evt){
     var currentAscii = evt.charCode;
     if((currentAscii >= 65 && currentAscii <= 90) ||
@@ -20,6 +21,7 @@ function onlyTextInput(evt){
     return false;
 }
 
+//Permite un numero limitado de numeros
 function nNumberValidate(evt, n){
     var onlyNumbers = onlyNumbersInput(evt);
     var e = evt.target;
@@ -27,6 +29,14 @@ function nNumberValidate(evt, n){
         if(e.value.length == n){
             return false;
         }
+        return true;
+    }
+    return false;
+}
+
+function dateDelimiter(evt){
+    var current = evt.charCode;
+    if(current == 47){
         return true;
     }
     return false;
@@ -56,7 +66,6 @@ function dniFormatValidation(e){
         }
         if (e.value.charAt(len - 1) == verNum){
             flag = true;
-            //console.log("Cedula Valida");
             e.classList.remove("s_input_error");
         }else{
             
@@ -163,12 +172,11 @@ function phoneError(e, n){
 }
 
 function dateFormatValidation(e){
-    
     var dateString = e.value.split("/");
     var n = dateString.length;
 
     e.classList.add("s_input_error");
-    if((n == 3) && (dateString[0].length === 2) && (dateString[1].length === 2)
+    if((n == 3) && (dateString[0].length <= 2) && (dateString[1].length <= 2)
     && (dateString[2].length === 4)){
         e.classList.remove("s_input_error");
         return true;
@@ -195,14 +203,14 @@ function emailFormatValidation(e){
     var n = emailString.length;
     e.classList.add("s_input_error");
     if(n == 2){
-        if((emailString[0].length >= 3) && (emailString[1].localeCompare("est.ups.edu.ec") === 0 || emailString[1].localeCompare("ups.edu.ec") === 0)){
+        if((emailString[0].length >= 3) 
+        && (emailString[1].localeCompare("est.ups.edu.ec") === 0 
+        || emailString[1].localeCompare("ups.edu.ec") === 0)){
             e.classList.remove("s_input_error");
             return true;
         }
     }
     return false;
-    //ed@est.ups.edu.ec
-    
 }
 
 function emailError(e){
@@ -245,7 +253,6 @@ function passwordFormatValidation(e){
         return true;
     }
     return false;
-    /*Contras@*/
 }
 
 function passwordError(e){
@@ -264,10 +271,8 @@ function submitForm(){
     var nForm = formElements.length;
     var flag = true;
     var aux;
-
     for(var i = 0; i < nForm; i++){
         var e = document.forms[0].elements[i];
-        // console.log("i:" +i +" id:" + e.id)
         switch(e.id){
             case "i_dni":
                 aux = dniError(e);
@@ -304,8 +309,6 @@ function submitForm(){
             default:
                 console.log("No form elements");
         }
-
     }
-    // console.log("FLAG: " +flag);
     return flag;
 }
