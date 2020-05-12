@@ -35,13 +35,13 @@ Se usaron los eventos onkeypress, onkeyup y onblur para llamar a las respectivas
 
 Para cada validación se optó por crear dos funciones, una que se llama mientras el usuario está escribiendo (onkeypress u onkeyup), y la otra agrega a los respectivos divs de cada campo la clase “s_show”. Esta última función es llama para la validación general cuando se envíen los datos.
 
-###### a.	Se debe validó que, en el campo de la cedula, se ingrese sólo números y que la misma sea correcta, en base, al último dígito verificador.
+##### a.	Se debe validó que, en el campo de la cedula, se ingrese sólo números y que la misma sea correcta, en base, al último dígito verificador.
 
-###### En HTML: 
+##### En HTML: 
 
 <img src="readme_resources/a.1.png"> 
 
-##### En JavaScript:
+#### En JavaScript:
 
 Esta función valida el numero de cédula con respecto al último dígito.
 
@@ -49,15 +49,15 @@ Esta función valida el numero de cédula con respecto al último dígito.
 
 Esta función agrega o elimina la clase “s_show” de la etiqueta div que contiene las pautas de validación.
 
-<img src="readme_resources/a.3.png"> 
+<img src="readme_resources/a.3.png"/> 
 
-###### b.   Se validó que, en el campo de nombres, ingrese exclusivamente dos nombres y que permita ingresar sólo letras, por ejemplo: “Gabriel Alejandro”, es válido; “Gabriel”, no es válido.
+##### b.   Se validó que, en el campo de nombres, ingrese exclusivamente dos nombres y que permita ingresar sólo letras, por ejemplo: “Gabriel Alejandro”, es válido; “Gabriel”, no es válido.
 
-###### En HTML:
+##### En HTML:
 
 <img src="readme_resources/b.1.png"> 
 
-###### En JavaScript:
+##### En JavaScript:
 
 Función que valida el número de nombres ingresados. Esta función también es llamada para los apellidos. 
 
@@ -67,13 +67,13 @@ Esta función agrega o elimina la clase “s_show” de la etiqueta div que cont
 
 <img src="readme_resources/b.3.png"> 
 
-###### c.   Se validó que, en el campo de apellidos, ingrese exclusivamente dos apellidos y que permita ingresar sólo letras, por ejemplo: “León Paredes”, es válido; “León”, no es válido.
+##### c.   Se validó que, en el campo de apellidos, ingrese exclusivamente dos apellidos y que permita ingresar sólo letras, por ejemplo: “León Paredes”, es válido; “León”, no es válido.
 
-###### En HTML:
+##### En HTML:
 
 <img src="readme_resources/c.1.png">  
 
-###### En JavaScript:
+##### En JavaScript:
 
 Para validar el número de apellidos se llama a la función nStringValidate().
 
@@ -81,13 +81,13 @@ Para validar el número de apellidos se llama a la función nStringValidate().
 
 Esta función agrega o elimina la clase “s_show” de la etiqueta div que contiene las pautas de validación.
 
-###### d.   Se validó que, en el campo del teléfono, permita ingresar sólo números y un máximo de 10 caracteres numéricos.
+##### d.   Se validó que, en el campo del teléfono, permita ingresar sólo números y un máximo de 10 caracteres numéricos.
 
-###### En HTML:
+##### En HTML:
  
 <img src="readme_resources/d.1.png">  
 
-###### En JavaScript:
+##### En JavaScript:
 
 Función que valida la cantidad números ingresados.
  
@@ -97,15 +97,15 @@ Esta función agrega o elimina la clase “s_show” de la etiqueta div que cont
  
 <img src="readme_resources/d.3.png">
 
-###### e.	Se validó que, la fecha de nacimiento ingrese en el formato dd/mm/yyyy.
+##### e.	Se validó que, la fecha de nacimiento ingrese en el formato dd/mm/yyyy.
 
-###### En HTML:
+##### En HTML:
 
 Para el ingreso de fechas se valida que se ingresen solo números, además del carácter “/” con la función “dateDelimiter(event)”.
 
 <img src="readme_resources/e.1.png"> 
 
-###### En JavaScript:
+##### En JavaScript:
 
 Función que valida el formato de fecha dd/mm/yyyy ó d/m/yyyy.
 
@@ -115,13 +115,13 @@ Esta función agrega o elimina la clase “s_show” de la etiqueta div que cont
 
 <img src="readme_resources/e.3.png"> 
  
-###### f.	Se validó que, en el campo correo electrónico, permita ingresar un correo válido. Se consideró como un correo válido, cuando comienza por tres o más valores alfanuméricos, luego un @, seguido por la extensión “ups.edu.ec” o “est.ups.edu.ec”.
+##### f.	Se validó que, en el campo correo electrónico, permita ingresar un correo válido. Se consideró como un correo válido, cuando comienza por tres o más valores alfanuméricos, luego un @, seguido por la extensión “ups.edu.ec” o “est.ups.edu.ec”.
 
-###### En HTML:
+##### En HTML:
 
 <img src="readme_resources/f.1.png">  
 
-###### En JavaScript:
+##### En JavaScript:
 
 Esta función valida el formato del correo electrónico, permitiendo el dominio “est.ups.edu.ec” ó “ups.edu.ec” y mínimo de 3 caracteres para le nombre de usuario.
 
@@ -131,13 +131,13 @@ Esta función agrega o elimina la clase “s_show” de la etiqueta div que cont
 
 <img src="readme_resources/f.3.png">  
 
-###### g.	Se validó que, la contraseña ingresada tenga mínimo 8 caracteres, además, debe incluir al menos: una letra mayúscula, una letra minúscula y un carácter especial (@, _, $)
+##### g.	Se validó que, la contraseña ingresada tenga mínimo 8 caracteres, además, debe incluir al menos: una letra mayúscula, una letra minúscula y un carácter especial (@, _, $)
 
-###### En HTML:
+##### En HTML:
 
 <img src="readme_resources/g.1.png">   
 
-###### En JavaScript:
+##### En JavaScript:
 
 Esta función valida el formato o las pautas necesarias para validar la contraseña.
 
@@ -147,13 +147,13 @@ Esta función agrega o elimina la clase “s_show” de la etiqueta div que cont
 
 <img src="readme_resources/g.3.png"> 
 
-###### h.	Validación de que el campo dirección no esté vacío.
+##### h.	Validación de que el campo dirección no esté vacío.
 
-###### En HTML:
+##### En HTML:
 
 <img src="readme_resources/h.1.png"> 
 
-###### En JavaScript:
+##### En JavaScript:
 
 Valida si el campo está vacío.
 
@@ -163,9 +163,9 @@ Esta función agrega o elimina la clase “s_show” de la etiqueta div que cont
 
 <img src="readme_resources/h.3.png"> 
 
-###### i.	Validación para “enviar” y abrir el documento PHP.
+##### i.	Validación para “enviar” y abrir el documento PHP.
 
-###### En HTML:
+##### En HTML:
 
 Input de tipo “submit”.
 
@@ -175,13 +175,13 @@ En la etiqueta “form”, se especificó el evento “obsubmit” para evitar e
 
 <img src="readme_resources/i.2.png">  
 
-###### En JavaScript:
+##### En JavaScript:
 
 La siguiente función valida que todos los campos cumplan con las validaciones, para lo cual, se creó una variable “flag” que va a contener lo que los métodos retornen, finalmente se procede a hacer una operación “and”, para asegurar que se retorne solo si se cumplen todas las validaciones.
  
 <img src="readme_resources/i.3.png"> 
 
-###### j.	Archivo PHP.
+##### j.	Archivo PHP.
 
 <img src="readme_resources/j.1.png"> 
 
